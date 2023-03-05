@@ -1,0 +1,32 @@
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\appsettings.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\API Rest HTTP soluções.exe
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\API Rest HTTP soluções.deps.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\API Rest HTTP soluções.runtimeconfig.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\API Rest HTTP soluções.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\API Rest HTTP soluções.pdb
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.csproj.AssemblyReference.cache
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.AssemblyInfoInputs.cache
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.AssemblyInfo.cs
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.csproj.CoreCompileInputs.cache
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets\msbuild.API Rest HTTP soluções.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets\msbuild.build.API Rest HTTP soluções.props
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.API Rest HTTP soluções.props
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.API Rest HTTP soluções.props
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\scopedcss\bundle\API Rest HTTP soluções.styles.css
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.csproj.CopyComplete
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\refint\API Rest HTTP soluções.dll
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.pdb
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\API Rest HTTP soluções.genruntimeconfig.cache
+C:\Users\gu07r\source\repos\Projeto API Rest HTTP C# 2023\API Rest HTTP soluções\obj\Debug\net6.0\ref\API Rest HTTP soluções.dll
