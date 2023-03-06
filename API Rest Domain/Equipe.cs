@@ -1,6 +1,10 @@
 ﻿namespace API_Rest_Domain
 {
-    internal class Equipe
+    public class Equipe
     {
+        public string Nome { get; set; }
+
+        public string setor { get; set; }
+
     }
 }
