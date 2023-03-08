@@ -26,7 +26,26 @@ namespace ASP.NET.Repositorios
 
         public async Task<FuncionarioModel> AdicionarFuncionario(FuncionarioModel funcionario)
         {
-            _bancodados.Funcionarios.Add(funcionario);
+            //FuncionarioModel funcionarioID = await BuscarFuncionarioID(id);
+            //funcionarioID.cargo = funcionario.cargo;
+            //funcionarioID.email = funcionario.email;
+
+            if (funcionario.cargo.ToLower() != "gerente")
+            {
+                _bancodados.Funcionarios.Add(funcionario);
+            }
+            else
+            {
+                if(funcionario.email == "")
+                {
+                    throw new Exception($"O campo email é obrigatório para gerentes");
+                }
+                else
+                {
+                    _bancodados.Funcionarios.Add(funcionario);
+                }
+
+            }
             _bancodados.SaveChanges();
 
             return funcionario;
@@ -44,7 +63,9 @@ namespace ASP.NET.Repositorios
             funcionarioID.nome = funcionario.nome;
             funcionarioID.cargo = funcionario.cargo;
             funcionarioID.email = funcionario.email;
-            funcionarioID.Referencia_Para_a_Equipe = funcionario.Referencia_Para_a_Equipe;
+            funcionarioID.EquipeId = funcionario.EquipeId;
+
+            _bancodados.SaveChanges();
 
             return funcionarioID;
         }

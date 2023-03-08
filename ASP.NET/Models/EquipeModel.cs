@@ -14,6 +14,6 @@ namespace ASP.NET.NovaPasta
         [Required]
         public string? setor { get; set; }
 
-        public ICollection<FuncionarioModel> Funcionario_ { get; set; }
+        //public ICollection<FuncionarioModel>? Funcionario_ { get; set; }
     }
 }

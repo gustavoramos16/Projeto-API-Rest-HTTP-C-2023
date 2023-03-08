@@ -43,16 +43,11 @@ namespace ASP.NET.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     email = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Referencia_Para_a_Equipe = table.Column<int>(type: "int", nullable: true)
+                    EquipeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Funcionarios", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Funcionarios_Equipes_Referencia_Para_a_Equipe",
-                        column: x => x.Referencia_Para_a_Equipe,
-                        principalTable: "Equipes",
-                        principalColumn: "Id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -60,21 +55,16 @@ namespace ASP.NET.Migrations
                 table: "Equipes",
                 columns: new[] { "Id", "Nome", "setor" },
                 values: new object[] { 1, "contador", "financeiro" });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Funcionarios_Referencia_Para_a_Equipe",
-                table: "Funcionarios",
-                column: "Referencia_Para_a_Equipe");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Funcionarios");
+                name: "Equipes");
 
             migrationBuilder.DropTable(
-                name: "Equipes");
+                name: "Funcionarios");
         }
     }
 }

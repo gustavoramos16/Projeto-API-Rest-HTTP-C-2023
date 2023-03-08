@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.NET.Migrations
 {
     [DbContext(typeof(SistemaDB))]
-    [Migration("20230308184012_DBInicialMigration")]
+    [Migration("20230308213939_DBInicialMigration")]
     partial class DBInicialMigration
     {
         /// <inheritdoc />
@@ -55,7 +55,8 @@ namespace ASP.NET.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("Referencia_Para_a_Equipe")
+                    b.Property<int?>("EquipeId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("cargo")
@@ -71,23 +72,7 @@ namespace ASP.NET.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Referencia_Para_a_Equipe");
-
                     b.ToTable("Funcionarios");
-                });
-
-            modelBuilder.Entity("ASP.NET.NovaPasta.FuncionarioModel", b =>
-                {
-                    b.HasOne("ASP.NET.NovaPasta.EquipeModel", "Equipe_")
-                        .WithMany("Funcionario_")
-                        .HasForeignKey("Referencia_Para_a_Equipe");
-
-                    b.Navigation("Equipe_");
-                });
-
-            modelBuilder.Entity("ASP.NET.NovaPasta.EquipeModel", b =>
-                {
-                    b.Navigation("Funcionario_");
                 });
 #pragma warning restore 612, 618
         }

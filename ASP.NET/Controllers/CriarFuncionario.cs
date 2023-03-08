@@ -27,7 +27,7 @@ namespace ASP.NET.Controllers
         public async Task<ActionResult<FuncionarioModel>> Cadastrar([FromBody] FuncionarioModel funcionarioModel)
         {
             FuncionarioModel funcionario = await _funcionariorep.AdicionarFuncionario(funcionarioModel);
-            return Ok(funcionario);
+            return Ok(funcionario); 
         }
 
         [HttpPut("{id}")]

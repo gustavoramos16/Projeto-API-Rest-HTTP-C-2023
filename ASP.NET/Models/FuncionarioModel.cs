@@ -6,8 +6,8 @@ namespace ASP.NET.NovaPasta
 {
     public class FuncionarioModel
     {
-        [Required]
-        public int Id { get; set; }
+        [Key]
+        public int Id { get; internal set; }
 
         [Required]
         public string? nome { get; set; }
@@ -18,10 +18,8 @@ namespace ASP.NET.NovaPasta
         public string? email { get; set; }
 
         [Required]
-        [NotMapped]
-        public int? Referencia_Para_a_Equipe { get; set; }
-        [ForeignKey("Referencia_Para_a_Equipe")]
-        
-        public EquipeModel Equipe_ { get; set; }
+        public int? EquipeId { get; set; }
+
+        //public EquipeModel? Equipe_ { get; set; }
     }
 }
