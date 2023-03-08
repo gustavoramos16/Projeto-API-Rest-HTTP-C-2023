@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ASP.NET.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDB : Migration
+    public partial class DBInicialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,30 +37,44 @@ namespace ASP.NET.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    nome = table.Column<string>(type: "longtext", nullable: true)
+                    nome = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    cargo = table.Column<string>(type: "longtext", nullable: true)
+                    cargo = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     email = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    referencia_para_a_equipe = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    Referencia_Para_a_Equipe = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Funcionarios", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Funcionarios_Equipes_Referencia_Para_a_Equipe",
+                        column: x => x.Referencia_Para_a_Equipe,
+                        principalTable: "Equipes",
+                        principalColumn: "Id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "Equipes",
+                columns: new[] { "Id", "Nome", "setor" },
+                values: new object[] { 1, "contador", "financeiro" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Funcionarios_Referencia_Para_a_Equipe",
+                table: "Funcionarios",
+                column: "Referencia_Para_a_Equipe");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Equipes");
+                name: "Funcionarios");
 
             migrationBuilder.DropTable(
-                name: "Funcionarios");
+                name: "Equipes");
         }
     }
 }

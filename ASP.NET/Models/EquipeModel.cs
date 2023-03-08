@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASP.NET.NovaPasta
 {
@@ -12,6 +13,7 @@ namespace ASP.NET.NovaPasta
 
         [Required]
         public string? setor { get; set; }
-        
+
+        public ICollection<FuncionarioModel> Funcionario_ { get; set; }
     }
 }

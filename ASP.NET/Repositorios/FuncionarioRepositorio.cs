@@ -44,7 +44,7 @@ namespace ASP.NET.Repositorios
             funcionarioID.nome = funcionario.nome;
             funcionarioID.cargo = funcionario.cargo;
             funcionarioID.email = funcionario.email;
-            funcionario.referencia_para_a_equipe = funcionario.referencia_para_a_equipe;
+            funcionarioID.Referencia_Para_a_Equipe = funcionario.Referencia_Para_a_Equipe;
 
             return funcionarioID;
         }

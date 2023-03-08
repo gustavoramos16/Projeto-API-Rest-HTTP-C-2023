@@ -21,7 +21,11 @@ namespace ASP.NET.Data
             modelBuilder.Entity<EquipeModel>()
                 .HasData(
                     new EquipeModel { Id = 1, Nome = "contador", setor = "financeiro" });
-            
+
+            modelBuilder.Entity<FuncionarioModel>()
+            .HasOne(o => o.Equipe_)
+            .WithMany(c => c.Funcionario_)
+            .HasForeignKey(o => o.Referencia_Para_a_Equipe);
         }
     }
 }

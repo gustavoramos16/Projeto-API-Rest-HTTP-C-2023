@@ -7,20 +7,13 @@ namespace ASP.NET.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EquipeController : ControllerBase
+    public class CriaçãoDeEquipe : ControllerBase
     {
         private readonly InterfaceEquipe _equiperep;
 
-        public EquipeController(InterfaceEquipe equiperep)
+        public CriaçãoDeEquipe(InterfaceEquipe equiperep)
         {
             _equiperep = equiperep;
-        }
-
-        [HttpGet]
-        public async Task<ActionResult<List<EquipeModel>>> BuscarEquipes()
-        {
-            List<EquipeModel> equipes = await _equiperep.ExibirTodasEquipes();
-            return Ok(equipes);
         }
 
         [HttpGet("{id}")]
