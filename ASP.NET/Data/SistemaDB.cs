@@ -17,6 +17,11 @@ namespace ASP.NET.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<EquipeModel>()
+                .HasData(
+                    new EquipeModel { Id = 1, Nome = "contador", setor = "financeiro" });
+            
         }
     }
 }

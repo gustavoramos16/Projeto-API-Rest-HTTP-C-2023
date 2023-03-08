@@ -35,11 +35,11 @@ namespace ASP.NET.Repositorios
         {
             EquipeModel equipeID = await BuscarEquipeID(id);
 
-            if( equipeID == null)
+            if (equipeID == null)
             {
                 throw new Exception($"O ID: {id} não foi encontrado");
             }
-            
+
             equipeID.Nome = equipe.Nome;
             equipeID.setor = equipe.setor;
 

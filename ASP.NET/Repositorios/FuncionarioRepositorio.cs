@@ -26,7 +26,7 @@ namespace ASP.NET.Repositorios
 
         public async Task<FuncionarioModel> AdicionarFuncionario(FuncionarioModel funcionario)
         {
-            _bancodados.Funcionarios.AddAsync(funcionario);
+            _bancodados.Funcionarios.Add(funcionario);
             _bancodados.SaveChanges();
 
             return funcionario;
@@ -60,7 +60,7 @@ namespace ASP.NET.Repositorios
             }
 
             _bancodados.Funcionarios.Remove(funcionarioID);
-            _bancodados.SaveChangesAsync();
+            _bancodados.SaveChanges();
 
             return true;
 
