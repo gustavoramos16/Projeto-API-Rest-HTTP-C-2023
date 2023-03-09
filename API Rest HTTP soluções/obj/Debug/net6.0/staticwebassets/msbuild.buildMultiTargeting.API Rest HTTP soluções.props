@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\API Rest HTTP soluções.props" />
-</Project>

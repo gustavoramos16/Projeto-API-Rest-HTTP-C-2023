@@ -19,7 +19,5 @@ namespace ASP.NET.NovaPasta
 
         [Required]
         public int? EquipeId { get; set; }
-
-        //public EquipeModel? Equipe_ { get; set; }
     }
 }
