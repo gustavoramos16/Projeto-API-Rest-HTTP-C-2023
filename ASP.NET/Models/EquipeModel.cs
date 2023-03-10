@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ASP.NET.NovaPasta
 {
@@ -13,6 +14,10 @@ namespace ASP.NET.NovaPasta
 
         [Required]
         public string? setor { get; set; }
+
+        [JsonIgnore]
+        [NotMapped]
+        public ICollection<FuncionarioModel>? Funcionario { get; set;}
 
     }
 }

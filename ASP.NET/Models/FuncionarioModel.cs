@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ASP.NET.NovaPasta
 {
@@ -17,7 +18,15 @@ namespace ASP.NET.NovaPasta
 
         public string? email { get; set; }
 
+
+
         [Required]
-        public int? EquipeId { get; set; }
+        [ForeignKey("Referencia para a equipe")]
+        public int? Referencia_para_a_equipe{ get; set; }
+
+        [JsonIgnore]
+        [NotMapped]
+        public EquipeModel? Equipe { get; set; } 
+        
     }
 }

@@ -25,7 +25,14 @@ namespace ASP.NET.Repositorios
 
         public async Task<EquipeModel> AdicionarEquipe(EquipeModel equipe)
         {
-            _bancodados.Equipes.Add(equipe);
+            if ((equipe.setor.ToLower() == "estoque") || (equipe.setor.ToLower() == "vendas") || (equipe.setor.ToLower() == "financeiro"))
+            {
+                _bancodados.Equipes.Add(equipe);
+            }
+            else
+            {
+                throw new Exception("o setor precisa ser definido como: estoque, vendas ou financeiro");
+            }
             _bancodados.SaveChanges();
 
             return equipe;
@@ -35,13 +42,21 @@ namespace ASP.NET.Repositorios
         {
             EquipeModel equipeID = await BuscarEquipeID(id);
 
+            if ((equipe.setor.ToLower() == "estoque") || (equipe.setor.ToLower() == "vendas") || (equipe.setor.ToLower() == "financeiro"))
+            {
+                equipeID.setor = equipe.setor;
+            }
+            else
+            {
+                throw new Exception("o setor precisa ser definido como: estoque, vendas ou financeiro");
+            }
+
             if (equipeID == null)
             {
                 throw new Exception($"O ID: {id} não foi encontrado");
             }
 
             equipeID.Nome = equipe.Nome;
-            equipeID.setor = equipe.setor;
 
             _bancodados.Equipes.Update(equipeID);
             _bancodados.SaveChanges();

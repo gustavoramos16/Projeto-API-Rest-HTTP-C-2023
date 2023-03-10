@@ -27,22 +27,28 @@ namespace ASP.NET.Repositorios
         public async Task<FuncionarioModel> AdicionarFuncionario(FuncionarioModel funcionario)
         {
 
-            if (funcionario.cargo.ToLower() != "gerente")
-            {
-                _bancodados.Funcionarios.Add(funcionario);
-            }
-            else
-            {
-                if(funcionario.email == "")
-                {
-                    throw new Exception($"O campo email é obrigatório para gerentes");
-                }
-                else
+            if (funcionario.cargo.ToLower() == "gerente" || funcionario.cargo.ToLower() == "operador" ) { 
+                if (funcionario.cargo.ToLower() != "gerente")
                 {
                     _bancodados.Funcionarios.Add(funcionario);
                 }
-
+                else
+                {
+                    if(funcionario.email == "")
+                    {
+                        throw new Exception("O campo email é obrigatório para gerentes");
+                    }
+                    else
+                    {
+                        _bancodados.Funcionarios.Add(funcionario);
+                    }
+                }
             }
+            else
+            {
+                throw new Exception("O cargo deve ser definido como: gerente ou operador");
+            }
+
             _bancodados.SaveChanges();
 
             return funcionario;
@@ -51,31 +57,38 @@ namespace ASP.NET.Repositorios
         public async Task<FuncionarioModel> AtualizarFuncionario(FuncionarioModel funcionario, int id)
         {
             FuncionarioModel funcionarioID = await BuscarFuncionarioID(id);
-            
-            if(funcionario.cargo.ToLower() != "gerente")
+
+            if (funcionario.cargo.ToLower() == "gerente" || funcionario.cargo.ToLower() == "operador")
             {
-                throw new Exception($"O campo email é obrigatório para gerentes");
-            }
-            else
-            {
-                if( funcionario.email == "")
+                if (funcionario.cargo.ToLower() != "gerente")
                 {
                     throw new Exception($"O campo email é obrigatório para gerentes");
                 }
                 else
                 {
-                    funcionarioID.cargo = funcionario.cargo;
+                    if (funcionario.email == "")
+                    {
+                        throw new Exception($"O campo email é obrigatório para gerentes");
+                    }
+                    else
+                    {
+                        funcionarioID.cargo = funcionario.cargo;
+                    }
                 }
             }
+            else
+            {
+                throw new Exception("O cargo deve ser definido como: gerente ou operador");
+            }
 
-            if(funcionarioID == null)
+            if (funcionarioID == null)
             {
                 throw new Exception($"O ID: {id} não foi encontrado");
             }
 
             funcionarioID.nome = funcionario.nome;
             funcionarioID.email = funcionario.email;
-            funcionarioID.EquipeId = funcionario.EquipeId;
+            funcionarioID.Referencia_para_a_equipe = funcionario.Referencia_para_a_equipe;
 
             _bancodados.SaveChanges();
 

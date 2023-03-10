@@ -3,6 +3,7 @@ using System;
 using ASP.NET.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.NET.Migrations
 {
     [DbContext(typeof(SistemaDB))]
-    partial class SistemaDBModelSnapshot : ModelSnapshot
+    [Migration("20230309195914_DBInicialMigration")]
+    partial class DBInicialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
